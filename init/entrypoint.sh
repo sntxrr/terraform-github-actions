@@ -13,7 +13,7 @@ if [[ -z "$TF_ENV_TOKEN" ]]; then
 	exit 1
 fi
 
-/bin/cat > .terraformrc << EOM
+/bin/cat > /root/.terraformrc << EOM
 credentials "app.terraform.io" {
   token = "$TF_ENV_TOKEN"
 }
