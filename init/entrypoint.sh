@@ -1,6 +1,9 @@
 #!/bin/sh
 set -e
 
+whoami
+pwd
+
 if [[ ! -z "$TOKEN" ]]; then
 	TF_ENV_TOKEN=$TOKEN
 fi
