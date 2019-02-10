@@ -9,6 +9,8 @@ echo "checking whats in the directory"
 ls
 echo "checking whats in /home"
 ls /home
+echo "checking whats in /root"
+ls /root
 
 if [[ ! -z "$TOKEN" ]]; then
 	TF_ENV_TOKEN=$TOKEN
