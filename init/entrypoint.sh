@@ -1,16 +1,16 @@
 #!/bin/sh
 set -e
 
-echo "checking who I am"
-whoami
-echo "checking where I am"
-pwd
-echo "checking whats in the directory"
-ls
-echo "checking whats in /home"
-ls /home
-echo "checking whats in /root"
-ls /root
+#echo "checking who I am"
+#whoami
+#echo "checking where I am"
+#pwd
+#echo "checking whats in the directory"
+#ls
+#echo "checking whats in /home"
+#ls /home
+#echo "checking whats in /root"
+#ls /root
 
 if [[ ! -z "$TOKEN" ]]; then
 	TF_ENV_TOKEN=$TOKEN
@@ -21,13 +21,13 @@ if [[ -z "$TF_ENV_TOKEN" ]]; then
 	exit 1
 fi
 
-/bin/cat > /root/.terraformrc << EOM
+/bin/cat > /home/.terraformrc << EOM
 credentials "app.terraform.io" {
   token = "$TF_ENV_TOKEN"
 }
 EOM
 
-/bin/cat /root/.terraformrc
+/bin/cat /home/.terraformrc
 
 cd "${TF_ACTION_WORKING_DIR:-.}"
 
