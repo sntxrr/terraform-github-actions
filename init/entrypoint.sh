@@ -1,6 +1,5 @@
 #!/bin/sh
 set -e
-cd "${TF_ACTION_WORKING_DIR:-.}"
 
 if [[ ! -z "$TOKEN" ]]; then
 	TF_ENV_TOKEN=$TOKEN
@@ -18,6 +17,8 @@ credentials "app.terraform.io" {
 EOM
 
 /bin/cat .terraformrc
+
+cd "${TF_ACTION_WORKING_DIR:-.}"
 
 set +e
 OUTPUT=$(sh -c "terraform init -no-color -input=false $*" 2>&1)
