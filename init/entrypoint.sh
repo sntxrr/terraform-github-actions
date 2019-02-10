@@ -1,9 +1,14 @@
 #!/bin/sh
 set -e
 
+echo "checking who I am"
 whoami
+echo "checking where I am"
 pwd
+echo "checking whats in the directory"
 ls
+echo "checking whats in /home"
+ls /home
 
 if [[ ! -z "$TOKEN" ]]; then
 	TF_ENV_TOKEN=$TOKEN
