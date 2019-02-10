@@ -19,7 +19,7 @@ credentials "app.terraform.io" {
 }
 EOM
 
-/bin/cat .terraformrc
+/bin/cat /root/.terraformrc
 
 cd "${TF_ACTION_WORKING_DIR:-.}"
 
