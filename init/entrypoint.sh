@@ -3,6 +3,7 @@ set -e
 
 whoami
 pwd
+ls
 
 if [[ ! -z "$TOKEN" ]]; then
 	TF_ENV_TOKEN=$TOKEN
